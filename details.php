@@ -51,7 +51,8 @@
             $senderType = $_SESSION['type'];
             $senderUserId = $_SESSION['userId'];
             $messageContent = $_POST['newMessage'];
-            $currentTime = date("Y-m-d-H:i", time());
+            $currentDate = date("Y-m-d", time());
+            $currentTime = date("h:i:s", time());
 
             /* Create new message element and attributes */
             $messageElement = $thisTicket->messages->addChild('message');
@@ -60,16 +61,22 @@
             /* Create new content element within new message element*/
             $messageElement->addChild('content',$messageContent);
             /* Create new timestamp element within new message element */
-            $messageElement->addChild('timeStamp',$currentTime);
-
+            $timeStamp = $messageElement->addChild('timeStamp');
+            $timeStamp->addChild('date', $currentDate);
+            $timeStamp->addChild('time', $currentTime);
 
             /* something further to consider is if the ticket was closed before new message was sent, ticket status should change to open, and dateClosed should be removed from ticket. For another time. */
 
             /* SAVE CHANGES TO tickets.xml DOCUMENT */
-            $ticketParentXML = dom_import_simplexml($ticketsXmlDoc)->ownerDocument;
+            $dom = new DOMDocument('1.0');
+            $dom->preserveWhiteSpace = false;
+            $dom->formatOutput = true;
+            $dom->loadXML($ticketsXmlDoc->asXML());
+            $dom->save('xml/tickets.xml');
+            /* $ticketParentXML = dom_import_simplexml($ticketsXmlDoc)->ownerDocument;
             $ticketParentXML->preserveWhiteSpace = false;
             $ticketParentXML->formatOutput = true;
-            $ticketParentXML->save("xml/tickets.xml");
+            $ticketParentXML->save("xml/tickets.xml"); */
         }
     }
 
@@ -94,7 +101,7 @@
         }
 
         /* for each message within the ticket, add the following html to the $messages var that will populate the html page*/
-        $messages .= "<div class=".$message->attributes()['sender']."><div class='sendDate'>".$message->timeStamp."</div><div class='msgContent'><p>".$message->content."</p><p> - ".$senderName."</p></div></div>";
+        $messages .= "<div class=".$message->attributes()['sender']."><div class='sendDate'>".$message->timeStamp->date ." at ".$message->timeStamp->time."</div><div class='msgContent'><p>".$message->content."</p><p> - ".$senderName."</p></div></div>";
     }
 
     /* Prevent form resubmits on page refresh -- random number stored as session var upon POST. Should not be the same twice in a row*/

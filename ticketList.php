@@ -54,6 +54,11 @@
 <main class = "ticketListContent">
     <h2>Your Tickets</h2>
     <table class = 'ticketList'>
+        <?php 
+            if($_SESSION['type'] == 'client'){
+                echo '<a href="createTicket.php">New Ticket</a>';
+            }
+        ?>
         <thead>
             <tr>
                 <th>Ticket Id</th>

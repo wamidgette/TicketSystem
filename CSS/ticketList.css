@@ -12,3 +12,15 @@
     width:80%;
     text-align: center;
 }
+table{
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+thead tr{
+    background:white;
+    border:1px solid black;
+}
+
+tbody tr:nth-child(even){
+    background: gray;
+}

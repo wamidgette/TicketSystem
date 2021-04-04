@@ -64,7 +64,7 @@ If Admin, redirects to list and shows all tickets -->
         </div>
         <div>
             <label for='password'>Password:</label>
-            <input id='password' name='password' type='text'/>
+            <input id='password' name='password' type='password'/>
         </div>
         <?= isset($errMsg)? $errMsg : ""; ?>
         </br>
