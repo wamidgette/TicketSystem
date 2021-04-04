@@ -11,7 +11,7 @@
                 <content>Can you please provide the product name?</content>
                 <timeStamp>2002-09-24-06:00</timeStamp>
             </message>
-        <message sender="client" userId="0001"><content>Fuck you Tom</content><timeStamp>2021-04-04-00:10</timeStamp></message><message sender="client" userId="0001"><content>sdf</content><timeStamp>2021-04-04-00:10</timeStamp></message><message sender="staff" userId="0005"><content>Frustrations</content><timeStamp>2021-04-04-03:20</timeStamp></message><message sender="client" userId="0001"><content>I am a user</content><timeStamp>2021-04-04-03:30</timeStamp></message></messages>
+        </messages>
         <dateCreated>2002-09-24-06:00</dateCreated>
     </ticket>
     <ticket userId="0004" ticketId="0002" category="support" status="closed"><!-- all required -->
