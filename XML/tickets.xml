@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This will be a support ticket system for a company that sells a variety of tech products -->
+<tickets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="tickets.xsd">
+    <ticket userId="0001" ticketId="0001" category="refunds" status="open">
+        <messages>
+            <message sender="client" userId="0001">
+                <content>I would like to request a refund for my product</content>
+                <timeStamp>2002-09-24-06:00</timeStamp><!-- this will be type dateTime -->
+            </message>
+            <message sender="staff" userId="0005">
+                <content>Can you please provide the product name?</content>
+                <timeStamp>2002-09-24-06:00</timeStamp>
+            </message>
+        <message sender="client" userId="0001"><content>Fuck you Tom</content><timeStamp>2021-04-04-00:10</timeStamp></message><message sender="client" userId="0001"><content>sdf</content><timeStamp>2021-04-04-00:10</timeStamp></message><message sender="staff" userId="0005"><content>Frustrations</content><timeStamp>2021-04-04-03:20</timeStamp></message><message sender="client" userId="0001"><content>I am a user</content><timeStamp>2021-04-04-03:30</timeStamp></message></messages>
+        <dateCreated>2002-09-24-06:00</dateCreated>
+    </ticket>
+    <ticket userId="0004" ticketId="0002" category="support" status="closed"><!-- all required -->
+        <messages>
+            <message sender="client" userId="0004">
+                <content>I need information on how my product works</content>
+                <timeStamp>2002-09-24-06:00</timeStamp>
+            </message>
+            <message sender="staff" userId="0010">
+                <content>Please allow me to refer you to my collegue</content>
+                <timeStamp>2002-09-24-06:00</timeStamp>
+            </message>
+            <message sender="staff" userId="0005"><!-- could have multiple support staff for one issue so userId must be required -->
+                <content>The user manual is attached in the email sent to you on January 8, 2021. Can I help you with anything else?</content>
+                <timeStamp>2002-09-24-06:00</timeStamp>
+            </message>
+            <message sender="client" userId="0004">
+                <content>No, thank you, that will be all.</content>
+                <timeStamp>2002-09-24-06:00</timeStamp>
+            </message>
+        </messages>
+        <dateCreated>2002-09-24-06:00</dateCreated>
+        <dateClosed>2002-09-24-06:00</dateClosed><!-- occurs 0 or 1 times -->
+    </ticket>
+</tickets>

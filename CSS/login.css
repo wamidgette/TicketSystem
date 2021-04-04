@@ -1,0 +1,33 @@
+
+/* STYLING FOR MAIN CONTENT OF LOGIN PAGE */
+.loginContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:lightsteelblue;
+    height:70vh;
+    text-align: center;
+}
+
+.loginContent form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.loginContent button{
+        width:75px;
+        height: 30px;
+        border-radius:10%;
+        font-weight: bold;
+        margin:10px;
+        background:darkslategray;
+}
+
+.loginContent button:hover{
+    cursor:pointer;
+    color:red;
+}

@@ -1,0 +1,14 @@
+/* STYLING FOR MAIN CONTENT OF TICKET LIST PAGE */
+.ticketListContent{
+    display: flex;
+    flex-direction: column;
+    background:lightsteelblue;
+    height:70vh;
+    justify-content: flex-start;
+    align-items:center;
+}
+
+.ticketListContent table{
+    width:80%;
+    text-align: center;
+}

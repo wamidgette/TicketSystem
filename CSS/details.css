@@ -1,0 +1,86 @@
+/* Details.php main section styling */
+
+.detailsContent{
+    display: flex;
+    flex-direction: column;
+    background:lightsteelblue;
+    min-height:70vh;
+}
+
+/* SUB TITLE */
+.subTitle{
+    text-align: center;
+}
+
+/* MESSAGES */
+.messages{
+    display: flex;
+    flex-direction: column;
+}
+
+.client{
+    width: 60%;
+    display:flex;
+    align-self:flex-start;
+    flex-direction: column;
+    text-align: center;
+    border:1px solid black;
+    border-radius:10px;
+    margin:20px;
+    overflow: hidden;
+}
+
+.staff{
+    width: 60%;
+    display:flex;
+    align-self:flex-end;
+    flex-direction: column;
+    text-align: center;
+    border:1px solid black;
+    border-radius:10px;
+    margin:20px;
+    overflow: hidden;
+}
+
+.client >*{
+    z-index: 0;
+}
+.client .msgContent{
+    background: coral;
+}
+.staff .msgContent{
+    background: greenyellow;
+}
+.sendDate{
+    background:lightslategrey;
+}
+
+/* FORM STYLING */
+.standardForm{
+    width:50%;
+    align-self:center;
+    text-align: center;
+    margin:50px;
+}
+
+.standardForm input{
+    border: 1px solid black;
+    border-radius:10px;
+    background:cornsilk;
+    width:100%;
+    height:50px;
+}
+
+.standardForm button{
+    width:75px;
+    height: 30px;
+    border-radius:10%;
+    font-weight: bold;
+    margin:10px;
+    background:darkslategray;
+}
+
+.standardForm button:hover{
+    cursor:pointer;
+    color:red;
+}

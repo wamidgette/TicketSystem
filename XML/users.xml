@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This will be a support ticket system for a company that sells a variety of tech products -->
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="users.xsd">
+    <user type="client" userId="0001">
+        <name>
+            <first>Richard</first>
+            <last>Thompson</last>
+        </name>
+        <email>rthompson@gmail.com</email>
+        <phone>647-XXX-XXXX</phone>
+        <login>
+            <userName>rthompson</userName>
+            <passWord>5f4dcc3b5aa765d61d8327deb882cf99</passWord>
+        </login>
+    </user>
+    <user type="staff" userId="0002" category="customerService">
+        <name>
+            <first>Steven</first>
+            <last>Johnson</last>
+        </name>
+        <email>sjohnson@support.com</email>
+        <phone>416-XXX-XXXX</phone>
+        <login>
+            <userName>sjohnson</userName>
+            <passWord>5f4dcc3b5aa765d61d8327deb882cf99</passWord>
+        </login>
+    </user>
+    <user type="client" userId="0004">
+        <name>
+            <first>John</first>
+            <last>MacDonald</last>
+        </name>
+        <email>jMacdonald@gmail.com</email>
+        <phone>416-XXX-XXXX</phone>
+        <login>
+            <userName>jmacdonald</userName>
+            <passWord>5f4dcc3b5aa765d61d8327deb882cf99</passWord>
+        </login>
+    </user>
+    <user type="staff" userId="0005" category="customerService">
+        <name>
+            <first>Daniel</first>
+            <last>Quintus</last>
+        </name>
+        <email>dQuintus@support.com</email>
+        <phone>519-XXX-XXXX</phone>
+        <login>
+            <userName>dquintus</userName>
+            <passWord>5f4dcc3b5aa765d61d8327deb882cf99</passWord>
+        </login>
+    </user>
+    <user type="staff" userId="0010" category="customerService">
+        <name>
+            <first>Tom</first>
+            <last>Fogerty</last>
+        </name>
+        <email>tFogert@support.com</email>
+        <phone>519-XXX-XXXX</phone>
+        <login>
+            <userName>tFogerty</userName>
+            <passWord>5f4dcc3b5aa765d61d8327deb882cf99</passWord>
+        </login>
+    </user>
+</users>

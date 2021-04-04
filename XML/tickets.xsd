@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="tickets">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ticket" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="messages">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="message" minOccurs="1" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="content" type="xs:string">
+                                                    </xs:element>
+                                                    <xs:element name="timeStamp" type="xs:date">
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="sender" type="clientStaff" use="required"/>
+                                                <xs:attribute name="userId" type="xs:positiveInteger" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="dateCreated" type="xs:date">
+                            </xs:element>
+                            <xs:element name="dateClosed" type="xs:date" minOccurs="0">
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="userId" type="xs:positiveInteger" use="required"/>
+                        <xs:attribute name="ticketId" type="xs:positiveInteger" use="required"/>
+                        <xs:attribute name="category" type="xs:token" use="required"/>
+                        <xs:attribute name="status" type="openClosed" use="required" />
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="openClosed">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="open"/>
+            <xs:enumeration value="closed"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="clientStaff">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="client"/>
+            <xs:enumeration value="staff"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

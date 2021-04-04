@@ -1,0 +1,56 @@
+/*Imported styling*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/*** 1. General styling***/
+html { 
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing:inherit;
+}
+body {
+    min-height:100vh;
+    max-width: 1200px;
+    margin:0 auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*** 2. Header section styling ***/
+header {
+   display: flex;
+   flex-direction: column;
+   border: 1px solid black;
+   background-color: aqua;
+   height:20vh;
+   justify-content: center;
+}
+
+.hidden {
+    position: absolute;
+    left: -3000000px;
+}   
+
+.mainNav {
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.mainNav a{
+    text-decoration: none;
+    color:black;
+}
+.siteTitle{
+    align-self: center;
+}
+
+.mainNav a:hover{
+    color:red;
+}
+
+/*** 3. Footer section styling ***/
+footer{
+    background:aqua;
+    height:10vh;
+}
